@@ -1,0 +1,5 @@
+`timescale 1ns / 1ps module BADF(
+input [3:0] a, [3:0] b,cin,
+output [3:0] s,ca);
+assign {ca,s}= a+b+{3'b000 + cin};
+endmodule

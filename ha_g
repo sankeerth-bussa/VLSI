@@ -1,0 +1,6 @@
+`timescale 1ns / 1ps module HA( input a,
+input b, output s, output ca );
+
+xor x1(s,a,b);
+and a1(ca,a,b); 
+endmodule

@@ -1,0 +1,21 @@
+‘timescale 1ns/1ps
+Module aluc (input [3:0] a, input [3:0] b, input [2:0] op, output [7:0] out);
+	reg [7:0] out;
+	wire [3:0] a;
+	wire [3:0] b;
+	wire [2:0] op;
+	always @ (a or b or op);
+		begin
+			case(op)
+				3’b000:out=a+b;
+				3’b001:out=a-b;
+				3’b010:out=a*b;
+				3’b011:out=a/b;
+				3’b100:out=a&b;
+				3’b101:out=a|b;
+				3’b110:out=a^b;
+				3’b111:out=a<<1;
+				default:out=8’b00000000;
+			endcase
+		end
+endmodule

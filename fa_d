@@ -1,0 +1,5 @@
+`timescale 1ns / 1ps module FADF(
+input a,b, c, output s,ca );
+assign s=a^b^c;
+assign ca=(a&b)|(b&c)|(c&a); 
+endmodule

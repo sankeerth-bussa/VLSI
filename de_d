@@ -1,0 +1,3 @@
+`timescale 1ns / 1ps
+module DEC8DF( input a, input b, input c, output [7:0] y ); assign y = ~ a?(~b?(~c? 8' b00000001:8'b00000010):(~s0?8'b00000100:8'b00001000)):(~s1?(~s0?8'b00010000:8’b00100000):(~s0?8' b01000000:8'b10000000));
+endmodule

@@ -1,0 +1,14 @@
+`timescale 1ns / 1ps
+module DMUX1x8( input a, s0, s1, s2,output y0, y1, y2, y3, y4, y5, y6, y7 ); wire w1,w2,w3;
+not n1(w1,s2);
+not n2(w2,s1);
+not n3(w3,s0);
+and a1(y0,a,w1,w2,w3);
+and a2(y1,a,w1,w2,s0);
+and a3(y2,a,w1,s1,w3);
+and a4(y3,a,w1,s1,s0);
+and a5(y4,a,s2,w2,w3);
+and a6(y5,a,s2,w2,s0);
+and a7(y6,a,s2,s1,w3);
+and a8(y7,a,s2,s1,s0); 
+endmodule

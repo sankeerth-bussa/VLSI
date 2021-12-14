@@ -1,0 +1,8 @@
+`timescale 1ns / 1ps module FAHA(
+input a,b,c, output s, ca );
+wire s1,c1,c2; xor x1(s1,a,b);
+xor x2(s,s1,c);
+and a1(c1,a,b);
+and a2(c2,s1,c);
+or o1(ca,c2,c1);
+endmodule

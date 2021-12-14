@@ -1,0 +1,5 @@
+`timescale 1ns / 1ps module BEToEX3(
+input [3:0] a, [3:0] b,cin,
+output [3:0] s,ca);
+BAS B1(a,4'b0011,cin,s,ca);
+endmodule

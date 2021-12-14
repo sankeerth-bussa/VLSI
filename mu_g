@@ -1,0 +1,14 @@
+`timescale 1ns / 1ps module MUX8x1(
+input a,b,c,d,e,f,g,h,s0,s1,s2, output y );
+wire w1,w2,w3,w4,w5,w6,w7,w8,w9,w10,w11; and a1(w4,a,w1,w2,w3);
+and a2(w5,b,w1,w2,s0);
+and a3(w6,c,w1,s1,w3);
+and a4(w7,d,w1,s1,s0);
+and a5(w8,e,s2,w2,w3);
+and a6(w9,f,s2,w2,s0);
+and a7(w10,g,s2,s1,w3);
+and a8(w11,h,s2,s1,s0); not n1(w1,s2);
+not n2(w2,s1);
+not n3(w3,s0);
+or o1(y,w4,w5,w6,w7,w8,w9,w10,w11);
+endmodule

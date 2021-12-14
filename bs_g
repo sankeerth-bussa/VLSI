@@ -1,0 +1,9 @@
+`timescale 1ns / 1ps module BAS(
+input [3:0] a, [3:0] b, cin, output [3:0] s, ca);
+wire [3:0]b1;
+xor x1(b1[0],b[0],cin);
+xor x2(b1[1],b[1],cin);
+xor x3(b1[2],b[2],cin);
+xor x4(b1[3],b[3],cin);
+BAFA ba(a,b1,cin,s,ca);
+endmodule

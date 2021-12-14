@@ -1,0 +1,6 @@
+`timescale 1ns / 1ps module HADF(
+input a, input b, output s, output ca );
+
+assign s = a^b; assign ca = a&b;
+
+endmodule

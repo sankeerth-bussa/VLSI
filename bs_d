@@ -1,0 +1,5 @@
+`timescale 1ns / 1ps module BASDF(
+input [3:0] a, [3:0] b,cin,
+output [3:0] s,ca); wire [3:0]b1;
+assign b1 = b^{cin,cin,cin,cin}; assign {ca,s}=a+b1+cin;
+endmodule
